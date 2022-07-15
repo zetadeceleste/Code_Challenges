@@ -8,9 +8,9 @@ order from the most number of occurrences to least.
 */
 
 const citiesOccur = (cities) => {
-  let citiesOccur = {};
-
   if (cities?.length) {
+    let citiesOccur = [];
+
     cities.forEach((city) => {
       citiesOccur[city] = !citiesOccur[city] ? 1 : (citiesOccur[city] += 1);
     });
@@ -19,9 +19,11 @@ const citiesOccur = (cities) => {
       .sort((a, b) => b.times - a.times)
       .slice(0, 5)
       .map((city) => city.name);
+
+    return citiesOccur;
   }
 
-  return citiesOccur;
+  return "Invalid array";
 };
 
 module.exports = citiesOccur;

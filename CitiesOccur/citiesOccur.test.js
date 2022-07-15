@@ -46,6 +46,16 @@ const citiesOcurr2 = [
 const citiesList3 = ["New York City"];
 
 describe("cities occur", () => {
+  test("should return 'Invalid array' if recieves []", () => {
+    const expected = "Invalid array";
+    const result = citiesOccur([]);
+    expect(result).toStrictEqual(expected);
+  });
+  test("should return 'Invalid array' if recieves 1", () => {
+    const expected = "Invalid array";
+    const result = citiesOccur(1);
+    expect(result).toStrictEqual(expected);
+  });
   test("should return citiesObj1 if recieves citiesList1", () => {
     const expected = citiesOcurr1;
     const result = citiesOccur(citiesList1);
