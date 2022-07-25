@@ -39,13 +39,12 @@ module.exports = isValid;
 // Another algorithm for solution
 
 // if (x % 3 === 0 || x % 5 === 0) return true;
-//
-//   for (let i = 1; i < x; i++) {
-//     for (let j = 1; j < x; j++) {
-//       if (i * 3 + j * 5 > x) break;
-//       if (i * 3 + j * 5 === x) {
-//         return true;
-//       }
+// for (let i = 1; i < x; i++) {
+//   for (let j = 1; j < x; j++) {
+//     if (i * 3 + j * 5 > x) break;
+//     if (i * 3 + j * 5 === x) {
+//       return true;
 //     }
 //   }
-//   return false;
+// }
+// return false;
