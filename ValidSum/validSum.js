@@ -23,7 +23,7 @@ const isValid = (x) => {
     let aux = x;
 
     do {
-      aux -= 3;
+      aux -= 8;
       if (isMultiple(aux)) {
         return true;
       }
