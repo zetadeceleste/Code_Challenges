@@ -20,9 +20,8 @@ Output:
 
 const windowOfWords = (words, c) => {
   if (words?.length && c > 0 && c < words?.length) {
-    let arr = [];
-    let auxArr = [];
-    let arrGrouped = [];
+    let rowGrouped = [];
+    let row = [];
     let middleWord = "";
 
     let from = 0;
@@ -33,20 +32,16 @@ const windowOfWords = (words, c) => {
         if (i === from + c) {
           middleWord = words[i];
         } else {
-          auxArr.push(words[i]);
+          row.push(words[i]);
         }
       }
 
-      arr[0] = auxArr;
-      arr[1] = middleWord;
-
-      arrGrouped.push(arr);
+      rowGrouped.push([row, middleWord]);
 
       if (to === words?.length) {
-        return arrGrouped.length > 1 ? arrGrouped : arr;
+        return rowGrouped.length > 1 ? rowGrouped : [...rowGrouped.flat()];
       } else {
-        arr = [];
-        auxArr = [];
+        row = [];
         middleWord = "";
         from++;
         to++;
