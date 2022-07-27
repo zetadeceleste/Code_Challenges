@@ -9,13 +9,13 @@ const wordsList1 = [
 const wordsList2 = [["I", "Ironman"], "am"];
 
 describe("window of words", () => {
-  test("should return 'Invalid array' if recieves words = [] and c = 2", () => {
-    const expected = "Invalid array";
+  test("should return 'Invalid input' if recieves words = [] and c = 2", () => {
+    const expected = "Invalid input";
     const result = windowOfWords([], 2);
     expect(result).toStrictEqual(expected);
   });
-  test("should return 'Invalid array' if recieves words = ['I', 'am', 'Ironman'] and c = 0", () => {
-    const expected = "Invalid array";
+  test("should return 'Invalid input' if recieves words = ['I', 'am', 'Ironman'] and c = 0", () => {
+    const expected = "Invalid input";
     const result = windowOfWords(["I", "am", "Ironman"], 0);
     expect(result).toStrictEqual(expected);
   });

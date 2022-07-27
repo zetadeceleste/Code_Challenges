@@ -5,6 +5,8 @@ Window of Words
 Extract a center word and a fixed-sized "window" of words around the word. Write a method signature that given an array of strings and an integer C (number of words to be taken on each side of the center word) extracts all the posible center words with their corresponding surrounding words.
 A center word is only valid if it has a C number of words surrounding it If C is 2 then the total window size is 5 (2 previous words + 1 center word + 2 next words). *
 
+Example:
+
 Input:
 If C: 2 and words: ['I', 'am', 'solving', 'an', 'interesting', 'NLP', 'problem']
 
@@ -49,7 +51,7 @@ const windowOfWords = (words, c) => {
     }
   }
 
-  return "Invalid array";
+  return "Invalid input";
 };
 
 module.exports = windowOfWords;
