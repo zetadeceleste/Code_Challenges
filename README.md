@@ -1,2 +1,2 @@
 # Code_Challenges
-Technical tests solved with TDD
+Technical tests solved with some tests applied
