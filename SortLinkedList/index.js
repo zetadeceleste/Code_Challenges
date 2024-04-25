@@ -11,7 +11,7 @@ e.g.
 1 -> 2 -> 2 -> 3 -> 3 -> 5 -> 6 -> 7 -> 9
 */
 
-class NodeList {
+class Node {
   constructor(data) {
     this.data = data
     this.next = null
@@ -48,7 +48,7 @@ class LinkedList {
   }
 
   append(data) {
-    const newNode = new NodeList(data)
+    const newNode = new Node(data)
 
     // If the linked list is empty, set the new node as the head and return to stop the function
     if (this.getHead() === null) {
@@ -56,12 +56,12 @@ class LinkedList {
       return
     }
 
-    let current = this.getHead()
-    while (current.getNext() !== null) {
-      current = current.getNext()
+    let currentNode = this.getHead()
+    while (currentNode.getNext() !== null) {
+      currentNode = currentNode.getNext()
     }
 
-    current.setNext(newNode)
+    currentNode.setNext(newNode)
   }
 
   getTail() {
@@ -70,12 +70,12 @@ class LinkedList {
       return null
     }
 
-    let current = this.getHead()
-    while (current.getNext() !== null) {
-      current = current.getNext()
+    let currentNode = this.getHead()
+    while (currentNode.getNext() !== null) {
+      currentNode = currentNode.getNext()
     }
 
-    return current
+    return currentNode
   }
 }
 
@@ -86,13 +86,13 @@ function mergeLists(lists) {
   // Iterate the list of linked lists
   for (let i = 0; i < lists.length; i++) {
     let currentList = lists[i]
-    let current = currentList.getHead()
+    let currentNode = currentList.getHead()
     let currentTail = currentList.getTail()
 
     // Iterate each linked list and append the data to the result linked list
-    while (current.getNext() !== null) {
-      listResult.append(current.getData())
-      current = current.getNext()
+    while (currentNode.getNext() !== null) {
+      listResult.append(currentNode.getData())
+      currentNode = currentNode.getNext()
     }
 
     listResult.append(currentTail.getData())
