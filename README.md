@@ -1,9 +1,14 @@
 # Code_Challenges
-Technical tests solved with some tests applied
 
-1- select a folder
-2- npm i
-3- npm run start -> to use nodemon
-4- npm run test -> to use jest
+Technical tests solved with tests applied
 
-WIP: Having one project folder with all separated files and tests @_@
+1- npm install -> to install node packages
+2- npm run test -> to run jest for tests
+
+Watch Usage (for console)
+› Press f to run only failed tests.
+› Press o to only run tests related to changed files.
+› Press p to filter by a filename regex pattern.
+› Press t to filter by a test name regex pattern.
+› Press q to quit watch mode.
+› Press Enter to trigger a test run.
