@@ -17,20 +17,20 @@ class Node {
     this.next = null
   }
 
-  setData(data) {
-    this.data = data
-  }
-
   getData() {
     return this.data
   }
 
-  setNext(next) {
-    this.next = next
+  setData(data) {
+    this.data = data
   }
 
   getNext() {
     return this.next
+  }
+
+  setNext(next) {
+    this.next = next
   }
 }
 
