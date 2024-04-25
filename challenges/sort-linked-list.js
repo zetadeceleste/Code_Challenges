@@ -129,28 +129,14 @@ function sortLinkedList(linkedList) {
   return linkedList
 }
 
-// TEST
-const linkedList1 = new LinkedList()
-linkedList1.append(1)
-linkedList1.append(3)
-linkedList1.append(5)
+function sortLinkedListLists(lists) {
+  const linkedList = mergeLists(lists)
+  const sortedLinkedList = sortLinkedList(linkedList)
 
-const linkedList2 = new LinkedList()
-linkedList2.append(2)
-linkedList2.append(3)
-linkedList2.append(6)
+  return sortedLinkedList
+}
 
-const linkedList3 = new LinkedList()
-linkedList3.append(2)
-linkedList3.append(7)
-linkedList3.append(9)
-
-const linkedList = mergeLists([linkedList1, linkedList2, linkedList3])
-console.log(JSON.stringify(linkedList))
-
-const sortedLinkedList = sortLinkedList(linkedList)
-
-console.log(JSON.stringify(sortedLinkedList))
+module.exports = { LinkedList, Node, sortLinkedListLists }
 
 // Chat GPT Solution:
 
