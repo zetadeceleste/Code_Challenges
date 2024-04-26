@@ -1,7 +1,7 @@
 {
-  "name": "code_challenges",
+  "name": "code-challenges",
   "version": "1.0.0",
-  "description": "Technical tests solved with some tests applied",
+  "description": "Technical tests solved with tests applied",
   "main": "index.js",
   "directories": {
     "test": "tests"
